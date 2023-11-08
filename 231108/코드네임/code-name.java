@@ -14,13 +14,26 @@ class Agent{
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int minscore = 100;
 
         Agent[] agents = new Agent[5];
         for(int i = 0; i < 5; i++){
             agents[i] = new Agent(sc.next(), sc.nextInt());
         }
 
-        System.out.print(agents[0].id + " " + agents[0].score);
+
+        for(int i = 0; i < 5; i++){
+            if(agents[i].score < minscore){
+                minscore = agents[i].score;
+            }
+        }
+
+        for(int i = 0; i < 5; i++){
+            if(agents[i].score == minscore){
+                System.out.print(agents[i].id + " " + agents[0].score);
+            }
+        }
+
 
     }
 }
