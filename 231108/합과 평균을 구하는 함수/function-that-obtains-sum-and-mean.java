@@ -7,8 +7,9 @@ public class Main {
         double a = sc.nextDouble();
         double b = sc.nextDouble();
         double c = sc.nextDouble();
+        long answer = Math.round(a)+Math.round(b)+Math.round(c);
 
-        System.out.println((int)a+(int)b+(int)c);
-        // System.out.println("(%.0f+%.0f+%.0f)/3\n", a,b,c);
+        System.out.println(answer);
+        System.out.println(answer/3);
     }
 }
