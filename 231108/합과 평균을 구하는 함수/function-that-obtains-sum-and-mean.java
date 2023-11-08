@@ -10,6 +10,6 @@ public class Main {
         long answer = Math.round(a)+Math.round(b)+Math.round(c);
 
         System.out.println(answer);
-        System.out.println(Math.round(answer/3));
+        System.out.println(Math.round((a+b+c)/3));
     }
 }
