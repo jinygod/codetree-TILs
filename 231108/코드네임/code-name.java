@@ -30,7 +30,7 @@ public class Main {
 
         for(int i = 0; i < 5; i++){
             if(agents[i].score == minscore){
-                System.out.print(agents[i].id + " " + agents[0].score);
+                System.out.print(agents[i].id + " " + agents[i].score);
             }
         }
 
