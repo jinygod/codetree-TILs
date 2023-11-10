@@ -12,6 +12,14 @@ public class Main {
         int min = 11;
         int elapsedtime = 0;
         while(true){
+        if(c < 11){
+            if(b < 11){
+                if(a < 11){
+                    elapsedtime = -1;
+                    break;
+                }
+            }
+        }
         if(date == a && hour == b && min == c){
             break;
         }
