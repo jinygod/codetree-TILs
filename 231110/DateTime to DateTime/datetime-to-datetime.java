@@ -3,40 +3,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        // 변수 선언 및 입력
         int a = sc.nextInt();
         int b = sc.nextInt();
         int c = sc.nextInt();
-        int date = 11;
-        int hour = 11;
-        int min = 11;
-        int elapsedtime = 0;
-        while(true){
-        if(c < 11){
-            if(b < 11){
-                if(a < 11){
-                    elapsedtime = -1;
-                    break;
-                }
-            }
-        }
-        if(date == a && hour == b && min == c){
-            break;
-        }
-
-        elapsedtime++;
-        min++;
-
-            if(min == 60){
-                hour++;
-                min = 0;
-            }
-            if(hour == 24){
-                date++;
-                hour = 0;
-            }
-        }
-
-        System.out.print(elapsedtime);
+        
+        // 차이를 계산합니다.
+        int diff = (a * 24 * 60 + b * 60 + c) - (11 * 24 * 60 + 11 * 60 + 11);
+        
+        // 출력
+        if(diff < 0)
+            System.out.print(-1);
+        else
+            System.out.print(diff);
     }
 }
