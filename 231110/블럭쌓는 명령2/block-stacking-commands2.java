@@ -12,7 +12,7 @@ public class Main {
             int A = sc.nextInt();
             int B = sc.nextInt();
             for(int j = A; j <= B; j++){
-                arr[j]++;
+                arr[j-1]++;
             }
         }
         int MAX = 0;
