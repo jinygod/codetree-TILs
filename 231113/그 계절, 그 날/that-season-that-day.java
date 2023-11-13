@@ -5,16 +5,14 @@ public class Main {
     public static int[] dateL = new int[]{0,31,29,31,30,31,30,31,31,30,31,30,31};
     public static boolean isLeapYear(int y){
         if(y % 4 == 0){
-            return true;
-        }
-        if(y % 4 == 0 && y % 100 == 0 && y % 400 != 0){
-            return false;
-        }
-        if(y % 4 == 0 && y % 100 == 0 && y % 400 == 0){
+            if(y % 100 == 0){
+                return y % 400 == 0;
+            }
             return true;
         }
         return false;
     }
+
 
     public static String weather(int y, int m, int d){
         if(isLeapYear(y)){
