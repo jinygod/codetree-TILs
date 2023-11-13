@@ -18,16 +18,16 @@ public class Main {
 
     public static String weather(int y, int m, int d){
         if(isLeapYear(y)){
-            if(m == 3 || m == 4 || m == 5 && d <= dateL[m]){
+            if((m == 3 || m == 4 || m == 5) && d <= dateL[m]){
                 return "Spring";
             }
-            else if(m == 6 || m == 7 || m == 8 && d <= dateL[m]){
+            else if((m == 6 || m == 7 || m == 8) && d <= dateL[m]){
                 return "Summer";
             }
-            else if(m == 9 || m == 10 || m == 11 && d <= dateL[m]){
+            else if((m == 9 || m == 10 || m == 11) && d <= dateL[m]){
                 return "Fall";
             }
-            else if(m == 12 || m == 1 || m == 2 && d <= dateL[m]){
+            else if((m == 12 || m == 1 || m == 2) && d <= dateL[m]){
                 return "Winter";
             }
             else{
@@ -35,16 +35,16 @@ public class Main {
             }
         }
         else{
-            if(m == 3 || m == 4 || m == 5 && d <= date[m]){
+            if((m == 3 || m == 4 || m == 5) && d <= date[m]){
                 return "Spring";
             }
-            else if(m == 6 || m == 7 || m == 8 && d <= date[m]){
+            else if((m == 6 || m == 7 || m == 8) && d <= date[m]){
                 return "Summer";
             }
-            else if(m == 9 || m == 10 || m == 11 && d <= date[m]){
+            else if((m == 9 || m == 10 || m == 11) && d <= date[m]){
                 return "Fall";
             }
-            else if(m == 12 || m == 1 || m == 2 && d <= date[m]){
+            else if((m == 12 || m == 1 || m == 2) && d <= date[m]){
                 return "Winter";
             }
             else{
