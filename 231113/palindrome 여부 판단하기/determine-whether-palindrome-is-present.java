@@ -1,26 +1,25 @@
 import java.util.Scanner;
 
 public class Main {
-    public static String palindrome(String s){
-        String newS = "";
-        for(int i = 0; i < s.length(); i++){
-            newS += s.indexOf(s.length() - 1 + i);
+    public static String reverse(String s) {
+        StringBuilder reversed = new StringBuilder();
+        for (int i = s.length() - 1; i >= 0; i--) {
+            reversed.append(s.charAt(i));
         }
-
-        return newS;
+        return reversed.toString();
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         String A = sc.next();
 
-        String B = palindrome(A);
+        String B = reverse(A);
 
-        if(B.equals(A)){
-            System.out.print("Yes");
-        }
-        else{
-            System.out.print("No");
+        if (B.equals(A)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
         }
     }
 }
