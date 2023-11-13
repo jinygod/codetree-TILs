@@ -4,6 +4,9 @@ public class Main {
     public static int[] date = new int[]{0,31,28,31,30,31,30,31,31,30,31,30,31};
     
     public static boolean isExist(int M, int D){
+        if(M > 12){
+            return false;
+        }
         if(D <= date[M]){
             return true;
         }
