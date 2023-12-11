@@ -14,6 +14,9 @@ public class Main {
             else if(m >= 90){
                 System.out.print(50000);
             }
+            else{
+                System.out.print(0);
+            }
         }
         else{
             System.out.print(0);
