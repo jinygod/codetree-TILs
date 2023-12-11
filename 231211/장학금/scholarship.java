@@ -9,10 +9,10 @@ public class Main {
 
         if(n > 90){
             if(m >= 95){
-                System.out.print(10);
+                System.out.print(100000);
             }
             else if(m >= 90){
-                System.out.print(5);
+                System.out.print(50000);
             }
         }
         else{
