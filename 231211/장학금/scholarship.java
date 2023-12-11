@@ -7,7 +7,7 @@ public class Main {
         int n = sc.nextInt();
         int m = sc.nextInt();
 
-        if(n > 90){
+        if(n >= 90){
             if(m >= 95){
                 System.out.print(100000);
             }
