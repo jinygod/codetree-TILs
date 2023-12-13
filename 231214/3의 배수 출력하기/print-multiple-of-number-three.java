@@ -7,7 +7,7 @@ public class Main {
         int i = 1;
         int n = sc.nextInt();
 
-        while(i <= 27){
+        while(i <= n){
             if(i % 3 == 0){
                 System.out.print(i + " ");
             }
