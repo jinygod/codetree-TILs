@@ -28,6 +28,7 @@ public class Main {
                 if(n % i == 0){
                     System.out.println(i);
                     n /= i;
+                    i--;
                     if(isPrime(n)){
                         System.out.print(n);
                         break;
