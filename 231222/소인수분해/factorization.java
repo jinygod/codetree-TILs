@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class Main {
-    public static boolean isPrime(int n){
-        if(n == 2){
+    public static boolean isPrime(int n) {
+        if (n == 2) {
             return true;
         }
 
-        for(int i = 2; i < n; i++){
-            if(n % i == 0){
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
                 return false;
             }
         }
@@ -20,20 +20,17 @@ public class Main {
 
         int n = sc.nextInt();
 
-        if(n == 1){
+        if (n == 1) {
             System.out.print(-1);
-        }
-        else{
-            for(int i = 2; i <= n; i++){
-                if(n % i == 0){
+        } else {
+            for (int i = 2; i <= n; i++) {
+                while (n % i == 0) {
                     System.out.println(i);
                     n /= i;
-                    i--;
-                    if(isPrime(n)){
-                        System.out.print(n);
-                        break;
-                    }
                 }
+            }
+            if (!isPrime(n) && n > 1) {
+                System.out.print(n);
             }
         }
     }
