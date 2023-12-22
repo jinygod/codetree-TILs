@@ -30,6 +30,7 @@ public class Main {
                     n /= i;
                     if(isPrime(n)){
                         System.out.print(n);
+                        break;
                     }
                 }
             }
