@@ -20,9 +20,9 @@ public class Main {
 
         int n = sc.nextInt();
 
-        if (n == 1) {
-            System.out.print(-1);
-        } else {
+        // if (n == 1) {
+        //     System.out.print(-1);
+        // } else {
             for (int i = 2; i <= n; i++) {
                 while (n % i == 0) {
                     System.out.println(i);
@@ -32,6 +32,6 @@ public class Main {
             if (!isPrime(n) && n > 1) {
                 System.out.print(n);
             }
-        }
+        // }
     }
 }
