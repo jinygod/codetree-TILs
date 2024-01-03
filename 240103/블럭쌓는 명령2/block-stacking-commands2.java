@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int N = sc.nextInt();
-        int[] arr = new int[N];
+        int[] arr = new int[N + 1];
         int K = sc.nextInt();
             int max = 0;
 
