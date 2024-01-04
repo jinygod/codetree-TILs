@@ -1,36 +1,44 @@
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+public class Main{
+    public static int n;
+    public static int[][] grid = new int[20][20];
 
-        // N 입력 받기, 격자선언
-        int N = sc.nextInt();
-        int[][] arr = new int[N][N];
+    public static int getNumOfGold(int rowS, int colS, int rowE, int colE){
+        int numOfGold = 0;
 
-        // N크기의 격자 입력받기
-        for(int i = 0; i < N; i++){
-            for(int j = 0; j < N; j++){
-                arr[i][j] = sc.nextInt();
+        for(int row = rowS; row <= rowE; row++){
+            for(int col = colS; col <= colE; col++){
+                numOfGold += grid[row][col];
             }
         }
 
-        int cnt = 0;
-
-        for(int row = 0; row < N; row++){
-            for(int col = 0; col < N; col++){
-                if(col > 3 || row > 3){
-                    continue;
-                }
-
-                if(arr[row][col] == 1){
-                    cnt++;
-                }
-            }
-        }
-
-        System.out.print(cnt);
-
-        
+        return numOfGold;
     }
+
+        public static void main(String[] args){
+            Scanner sc = new Scanner(System.in);
+
+            int maxGold = 0;
+
+            n = sc.nextInt();
+            for(int row = 0; row < n; row++){
+                for(int col = 0; col < n; col++){
+                    grid[row][col] = sc.nextInt();
+                }
+            }
+
+            for(int row = 0; row < n; row++){
+                for(int col = 0; col < n; col++){
+                    if(col + 2 >= n || row + 2 >= n){
+                        continue;
+                    }
+
+                    int Gold = getNumOfGold(row, col, row+2, col+2);
+                    maxGold = Math.max(maxGold, Gold);
+                }
+            }
+
+            System.out.print(maxGold);
+        }
 }
