@@ -19,7 +19,7 @@ public class Main {
 
         for(int row = 0; row < N; row++){
             for(int col = 0; col < N; col++){
-                if(col > N){
+                if(col > 3){
                     continue;
                 }
 
