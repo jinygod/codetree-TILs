@@ -19,15 +19,18 @@ public class Main {
             if(devArr[i + 1] - devArr[i] > devArr[i + 2] - devArr[i + 1]){
             } 
             else if(devArr[i + 1] - devArr[i] < devArr[i + 2] - devArr[i + 1]){
-            //    System.out.println(devArr[i]);
+             //   System.out.println(222);
+           //     System.out.println(devArr[i]);
                 ball++;
-                if(devArr[i + 1] - devArr[i] == devArr[i + 2] - devArr[i + 1]){
-                    continue;
-                }
+            }
+            else{
+             //   System.out.println(333);
+             //   System.out.println(devArr[i]);
+                ball++;
             }
 
         }
 
-        System.out.print(ball);
+        System.out.print(ball - 1);
     }
 }
