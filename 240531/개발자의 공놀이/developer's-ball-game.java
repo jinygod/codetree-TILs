@@ -22,7 +22,9 @@ public class Main {
             else if(devArr[i + 1] - devArr[i] < devArr[i + 2] - devArr[i + 1]){
             //    System.out.println(devArr[i]);
                 ball++;
-                order++;
+            }
+            else{
+                ball--;
             }
         }
 
