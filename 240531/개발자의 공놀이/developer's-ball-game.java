@@ -5,32 +5,38 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int n = sc.nextInt();
-        int[] devArr = new int[n +2 ];
-        int ball = 1;
+        int N = sc.nextInt();
+        int[] A = new int[N + 2];
+        int[] B = new int[N + 2];
+        int[] C = new int[N + 2];
 
-        for(int i = 0; i < n; i++){
-            devArr[i] = sc.nextInt();
+        // 개발자의 위치 입력
+        for (int i = 1; i <= N; i++) {
+            A[i] = sc.nextInt();
+        }
+        // 가상의 위치 추가
+        A[0] = -1000;
+        A[N + 1] = 2000;
+
+        // 위치 정렬
+        Arrays.sort(A, 1, N + 1);
+
+        // 공을 주고받을 사람 정하기
+        for (int i = N; i >= 1; i--) {
+            int nxt = (A[i] - A[i - 1]) <= (A[i + 1] - A[i]) ? i - 1 : i + 1;
+            B[i] = nxt;
+            C[nxt]++;
         }
 
-        Arrays.sort(devArr);
+        int Ans = 0;
 
-        for(int i = 2; i < n; i++){
-            if(devArr[i + 1] - devArr[i] > devArr[i + 2] - devArr[i + 1]){
-            } 
-            else if(devArr[i + 1] - devArr[i] < devArr[i + 2] - devArr[i + 1]){
-             //   System.out.println(222);
-           //     System.out.println(devArr[i]);
-                ball++;
+        // 최소 공 개수 계산
+        for (int i = 1; i <= N; i++) {
+            if (C[i] == 0 || (B[B[i]] == i && C[i] == 1 && C[B[i]] == 1 && i < B[i])) {
+                Ans++;
             }
-            else{
-             //   System.out.println(333);
-             //   System.out.println(devArr[i]);
-                ball++;
-            }
-
         }
 
-        System.out.print(ball - 1);
+        System.out.println(Ans);
     }
 }
