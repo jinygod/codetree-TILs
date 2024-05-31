@@ -7,8 +7,7 @@ public class Main {
 
         int n = sc.nextInt();
         int[] devArr = new int[n +2 ];
-        int order = 0;
-        int ball = 0;
+        int ball = 1;
 
         for(int i = 0; i < n; i++){
             devArr[i] = sc.nextInt();
@@ -22,10 +21,11 @@ public class Main {
             else if(devArr[i + 1] - devArr[i] < devArr[i + 2] - devArr[i + 1]){
             //    System.out.println(devArr[i]);
                 ball++;
+                if(devArr[i + 1] - devArr[i] == devArr[i + 2] - devArr[i + 1]){
+                    
+                }
             }
-            else{
-                ball--;
-            }
+
         }
 
         System.out.print(ball);
