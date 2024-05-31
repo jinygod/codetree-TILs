@@ -17,6 +17,9 @@ public class Main {
         }
 
         for(int i = 0; i < leng; i++){
+            if(input[i] < 10){
+                continue;
+            }
             countArr[(input[i] / 10)-1]++;
         }
 
