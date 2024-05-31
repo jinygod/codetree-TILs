@@ -20,6 +20,9 @@ public class Main {
             if(score[i] == 100){
                 countArr[0]++;
             }
+            else if(score[i] < 10){
+                continue;
+            }
             else{
                  countArr[Math.abs((score[i] / 10 * 10 - 100) / 10)]++;
             }
