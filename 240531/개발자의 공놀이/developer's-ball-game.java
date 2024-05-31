@@ -22,7 +22,7 @@ public class Main {
             //    System.out.println(devArr[i]);
                 ball++;
                 if(devArr[i + 1] - devArr[i] == devArr[i + 2] - devArr[i + 1]){
-                    
+                    continue;
                 }
             }
 
