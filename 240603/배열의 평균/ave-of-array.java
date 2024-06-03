@@ -43,6 +43,6 @@ public class Main {
                 
             }
         }
-        System.out.print(tSum / 8);
+        System.out.printf("%.1f", (tSum / 8));
     }
 }
