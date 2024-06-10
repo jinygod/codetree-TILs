@@ -11,6 +11,9 @@ public class Main {
 
         for(int i = 0; i < n; i++){
             System.out.print(charArr[str.length()-i - 1]);
+            if(str.length() > n){
+                break;
+            }
         }
     }
 }
