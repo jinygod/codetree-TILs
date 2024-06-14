@@ -14,8 +14,10 @@ class A007 {
 
 public class Main {
     public static void main(String[] args) {
-        
-        A007 a008 = new A007("codetree",'L',13);
+        Scanner sc = new Scanner(System.in);
+
+
+        A007 a008 = new A007(sc.next(), sc.next().charAt(0), sc.nextInt());
 
         System.out.println("secret code : " + a008.code);
         System.out.println("meeting point : " + a008.point);
